@@ -102,7 +102,9 @@ def lifespan(app: FastAPI):
             package_name="bookstore",
             base_url=f"http://127.0.0.1:{PORT}",
         )
-        subprocess.Popen(["cd", "sdk/bookstore-typescript", "&&", "npm", "install"])
+        print("installing sdk...")
+        sdk_path = Path(__file__).parent / "sdk/bookstore-typescript"
+        subprocess.call(args=["npm", "install"], cwd=str(sdk_path))
         spec_path.write_text(openapi_spec)
     yield
 
