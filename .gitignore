@@ -1,0 +1,4 @@
+__pycache__/
+.venv/
+sdk/
+openapi.json
