@@ -1,4 +1,4 @@
 __pycache__/
 .venv/
-sdk/
+sdk/bookstore-typescript/node_modules
 openapi.json

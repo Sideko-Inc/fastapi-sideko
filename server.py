@@ -1,4 +1,5 @@
 import json
+import subprocess
 from enum import Enum
 from hashlib import sha256
 from pathlib import Path
@@ -99,8 +100,9 @@ def lifespan(app: FastAPI):
             openapi_spec,
             "./sdk",
             package_name="bookstore",
-            base_url=f"http://localhost:{PORT}",
+            base_url=f"http://127.0.0.1:{PORT}",
         )
+        subprocess.Popen(["cd", "sdk/bookstore-typescript", "&&", "npm", "install"])
         spec_path.write_text(openapi_spec)
     yield
 

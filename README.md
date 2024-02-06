@@ -21,10 +21,12 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Install Python Dependencies
+3. Install Server & UI Dependencies
 
 ```bash
 pip install -r requirements.txt
+cd sdk/bookstore-typescript && npm i && cd ../..
+cd bookstore-ui && npm i && cd ../
 ```
 
 4. Configure Sideko SDK generator key
@@ -40,24 +42,11 @@ sideko login
 python server.py
 ```
 
-## Using the Generated SDK
-
-A Typescript SDK will automatically be generated when you start or alter the server, try it out with:
+6. Start the NextJS Dev server
 
 ```bash
-cd sdk/bookstore-typescript
-npm install
-
-node
-```
-
-In `node` interactive shell:
-
-```javascript
-const { Client } = require("./dist");
-
-const client = new Client({ apiKey: "super-secret" });
-client.listBooks().then((b) => console.log(JSON.stringify(b, null, 2)));
+cd bookstore-ui
+npm run dev
 ```
 
 ## Exercise
@@ -70,9 +59,8 @@ See how SDK code generation seamlessly builds with FastAPI development by comple
 3.  Implement the endpoint logic:
     - Create a `Book` from the provided `NewBook` body
     - Add the newly created book to the in-memory `database` list
-4.  Notice how the `lifespan` method will automatically generate an updated SDK in typescript, install it (`cd sdk/bookstore-typescript && npm i`) and try out your new generated method!
-
-Bonus points: create a basic webapp using NextJS or create-react-app that uses the generated SDK as a dependency!
+    - _Notice how the `lifespan` method will automatically generate an updated SDK in typescript_
+4.  Implement a `New Book` button in `bookstore-ui` that calls the new POST route
 
 ## Generate other languages
 

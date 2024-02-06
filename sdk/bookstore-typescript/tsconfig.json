@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "noImplicitAny": false,
+    "noUnusedParameters": false,
+    "noUnusedLocals": false,
+    "strictNullChecks": true,
+    "sourceMap": false,
+    "removeComments": true,
+    "declaration": true,
+    "rootDir": "./lib",
+    "outDir": "./dist"
+  },
+  "include": [
+      "./lib/**/*.ts"
+  ],
+  "exclude": ["**/*.test.ts"]
+}
