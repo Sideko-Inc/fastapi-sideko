@@ -1,9 +1,9 @@
 # FastAPI x Sideko - Generate SDKs as you go
 
-Source code for "Generating SDK Clients with FastAPI" article published on:
+Source code for "How to Supercharge Full Stack Development with FastAPI & SDK Generation" article published on:
 
-- [Sideko]() # TODO: link
-- [Medium]() # TODO: link
+- [Sideko](https://www.sideko.dev/blog/posts/sdk-fastapi)
+- [Medium](https://medium.com/@posenelias/how-to-supercharge-full-stack-development-with-fastapi-sdk-generation-8b89901f7cd2)
 
 ## Setup
 
@@ -73,4 +73,4 @@ sideko generate http://localhost:8000/openapi.json python -o ./sdk
 
 ## Contact
 
-Feel free to reach out with any comments or questions to `team@sideko.dev` or leave a comment on the [Medium article]() #TODO: link
+Feel free to reach out with any comments or questions to `team@sideko.dev` or leave a comment on the [Medium article](https://medium.com/@posenelias/how-to-supercharge-full-stack-development-with-fastapi-sdk-generation-8b89901f7cd2)
